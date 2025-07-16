@@ -1,11 +1,11 @@
 <div align="center">
-  <h1 style="font-size: 1.8em; margin-bottom: 0em;">
-    <span style="color:#007ACC; font-weight:bold;">MoCap2GT: </span>
+  <h1 style="font-size: 1.8em; margin-bottom: 0em">
+    <strong>MoCap2GT:</strong>
   </h1>
   <h2 style="font-size: 1.4em; margin-top: 0;">
-    A High-Precision <span style="color:#007ACC; font-weight:bold;">G</span>round <span style="color:#007ACC; font-weight:bold;">T</span>ruth Estimator for SLAM Benchmarking<br>
-    Based on <span style="color:#007ACC; font-weight:bold;">Mo</span>tion 
-    <span style="color:#007ACC; font-weight:bold;">Cap</span>ture and IMU Fusion
+    A High-Precision <strong>G</strong>round <strong>T</strong>ruth Estimator for SLAM Benchmarking<br>
+    Based on <strong>Mo</strong>tion 
+    <strong>Cap</strong>ture and IMU Fusion
   </h2>
 </div>
 
