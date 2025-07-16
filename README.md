@@ -113,7 +113,7 @@ run_mocap2gt:v0.1
 3. Inside the running container, build the project:
 
 ```bash
-cd /MoCap2GT
+cd /mocap2gt
 
 mkdir -p build && cd build
 
@@ -202,6 +202,6 @@ limitations under the License.
 
 ---
 
-**Stay tuned for upcoming releases featuring additional data, improved tools, and extended support for more sensor setups!**
+**Stay tuned for upcoming releases featuring additional datasets, improved tools, and extended support for more sensor setups!**
 
 We welcome community feedback and contributions to help advance MoCap2GT.
