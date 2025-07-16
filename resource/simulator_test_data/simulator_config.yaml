@@ -1,0 +1,19 @@
+# Frequency of generated data.
+mocap_freq: 300  # Hz
+imu_freq: 500  # Hz
+
+# Transformation between IMU and MoCap in generated data.
+# Transform from I(IMU body frame) to M(MoCap body frame), [px (m), py (m), pz (m)], [qx, qy, qz, qw]. 
+p_MI: [0.1, 0.05, 0.15]
+q_MI: [0.0356081, -0.0110551,  0.0296325, 0.99863]
+# Transform from G(IMU world frame, gravity aligned) to W(MoCap world frame), (qx, qy, qz, qw)
+q_WG: [0.0374784,  0.0516951, -0.0379818,   0.998027]
+# Time offset between IMU and MoCap [IMU time (s) = mocap time (s) + toff_MI (s)].
+toff_MI: 0.003
+
+# Noise in generated data.
+# Discrete time MoCap noise std.
+mocap_trans_noise: [0.001, 0.001, 0.001]  # m
+mocap_rot_noise: [0.002, 0.002, 0.002]  # rad
+# Continuous time IMU noise std. [acc white noise (m/s^2/sqrt(Hz)), acc bias walk (m/s^3/sqrt(Hz)), gyr white noise (rad/s/sqrt(Hz)), gyr bias walk (rad/s^2/sqrt(Hz))]
+imu_noise: [2.0688e-2, 1.0356e-3, 8.3882e-04, 1.1771e-05]

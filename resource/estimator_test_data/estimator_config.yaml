@@ -1,0 +1,37 @@
+# Optimization options
+# Frequency of the target GT trajectory to be estimated.
+est_traj_freq: 100  # Hz
+# Measurement relinearization count during estimation.
+relin_iter_count: 1
+# Model MoCap measurements using a linear or a cubic B-spline method.
+use_spline_model_flag: true
+# Whether to estimate the calibration parameters, 
+# if false, they will be fixed in the system.
+est_T_MI_flag: true
+est_q_WG_flag: true
+est_toff_MI_flag: true
+variable_toff_flag: true
+toff_control_point_interval: 30
+
+# Whether to initialize the calibration parameters that are not fixed using our initializer.
+use_initializer_flag: true
+# # Initial guesses (We can omit the initial guesses when using the initializer. )
+# # Transform from I(IMU body frame) to M(MoCap body frame), [px (m), py (m), pz (m)], [qx, qy, qz, qw]. 
+# p_MI_init: [-0.006187066980904047, 0.044462231955122895, -0.051046700136109235]
+# q_MI_init: [-0.5799490252444921, 0.41579825336693943, -0.44479680435002378, 0.54122707199009623]
+# # Transform from G(IMU world frame, gravity aligned) to W(MoCap world frame), [qx, qy, qz, qw]. 
+# q_WG_init: [0, 0, 0, 1]
+# # Time offset between IMU and MoCap [IMU time (s) = mocap time (s) + toff_MI (s)].
+# toff_MI_init: 1034771.5065181029
+# Gravity magnitude (m/s^2), will not be optimized.
+gravity_magnitude: 9.8
+
+# Sensor settings.
+# Discrete time MoCap noise std.
+mocap_trans_noise: [0.0002, 0.0002, 0.0002]  # m
+mocap_rot_noise: [0.001, 0.001, 0.001]  # rad
+# Continuous time IMU noise std: 
+# [acc white noise (m/s^2/sqrt(Hz)), acc bias walk (m/s^3/sqrt(Hz)), 
+#     gyr white noise (rad/s/sqrt(Hz)), gyr bias walk (rad/s^2/sqrt(Hz))]
+imu_noise: [2.0688e-2, 1.0356e-3, 8.3882e-04, 1.1771e-05]
+imu_freq: 200  # Hz

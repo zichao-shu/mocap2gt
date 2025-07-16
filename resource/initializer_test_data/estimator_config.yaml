@@ -1,0 +1,12 @@
+# Initial guesses. Here it is used to provide the ground-truth. 
+# Transform from I(IMU body frame) to M(MoCap body frame), [px (m), py (m), pz (m)], [qx, qy, qz, qw]. 
+use_initializer_flag: false
+p_MI_init: [0.25, 0.05, 0.15]
+q_MI_init: [0.0356081, -0.0110551,  0.0296325, 0.99863]
+# Transform from G(IMU world frame, gravity aligned) to W(MoCap world frame), [qx, qy, qz, qw]. 
+q_WG_init: [0.0374784,  0.0516951, -0.0379818,   0.998027]
+# Time offset between IMU and MoCap [IMU time (s) = mocap time (s) + toff_MI (s)].
+toff_MI_init: 10000.123
+# Gravity magnitude (m/s^2), will not be optimized.
+gravity_magnitude: 9.8
+
